@@ -1,0 +1,11 @@
+version: 1.0.0
+files:
+  - url: Minigo-1.0.0.dmg
+    sha512: HXV2NOqixfVVi5p7kCdLtmQZXxRm30gRG8oEynAa+SDsQ0ZE5Pv/JqjTZH15meDarn47OUu5HCbDMBYzg8ieWQ==
+    size: 123607172
+  - url: Minigo-1.0.0-arm64.dmg
+    sha512: AfU79QrF7Qn+zZLyRwm8nGQ/spEelio/kjEcJQEOxKQiE3GdyX0X8DkK+kpPCiGxyhR5bYqR062xOvCoV/OhNg==
+    size: 118323975
+path: Minigo-1.0.0.dmg
+sha512: HXV2NOqixfVVi5p7kCdLtmQZXxRm30gRG8oEynAa+SDsQ0ZE5Pv/JqjTZH15meDarn47OUu5HCbDMBYzg8ieWQ==
+releaseDate: '2026-03-26T17:48:52.831Z'

@@ -1,0 +1,7 @@
+# DMG and large build files — upload these via GitHub Releases, not git
+*.dmg
+*.dmg.blockmap
+*.exe
+*.AppImage
+*.snap
+*.deb
