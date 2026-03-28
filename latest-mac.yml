@@ -1,11 +1,11 @@
-version: 1.0.8
+version: 1.0.9
 files:
-  - url: Minigo-1.0.8.dmg
-    sha512: BTXFA0BmmaNNkCeiPzCAo7FsnM+3x0fTIks/WA7aPm681QMhtoEN1GWvfP4xKusT6gTVVAGablReTyogP+ibzg==
-    size: 127393700
-  - url: Minigo-1.0.8-arm64.dmg
-    sha512: cbuOe02SpSgCvZYM4NFuiqmo/OIUlz0a9drrDfu9qgRyuRXGrEaJ9WwoOO8zV/9cburcgHC+2TvHjXCu4T+tEw==
-    size: 119249498
-path: Minigo-1.0.8.dmg
-sha512: BTXFA0BmmaNNkCeiPzCAo7FsnM+3x0fTIks/WA7aPm681QMhtoEN1GWvfP4xKusT6gTVVAGablReTyogP+ibzg==
-releaseDate: '2026-03-28T10:09:47.146Z'
+  - url: Minigo-1.0.9.dmg
+    sha512: ounnfuvVaXFy91Gv08V+OAST0WBBKFzdNz6ZVYmdEYmLvelRTm6iLmHpA1OIXAlVx1vafV7MKzzvGX1VXBDDMg==
+    size: 127425263
+  - url: Minigo-1.0.9-arm64.dmg
+    sha512: JoRuxDwkA/6DBZJ3FzCOykBWiqfoGDgsOhRHvY4X4DWKbxR2dps6czpNfwHq0f77sPWICw6nIYSd8cDB24g2Rw==
+    size: 119287745
+path: Minigo-1.0.9.dmg
+sha512: ounnfuvVaXFy91Gv08V+OAST0WBBKFzdNz6ZVYmdEYmLvelRTm6iLmHpA1OIXAlVx1vafV7MKzzvGX1VXBDDMg==
+releaseDate: '2026-03-28T11:39:15.130Z'
