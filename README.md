@@ -6,8 +6,8 @@ Download Minigo to install and use OpenClaw AI agent with a friendly GUI.
 
 | Platform | Architecture | File |
 |----------|-------------|------|
-| macOS | Apple Silicon (M1/M2/M3/M4) | `Minigo-1.0.6-arm64.dmg` |
-| macOS | Intel | `Minigo-1.0.6.dmg` |
+| macOS | Apple Silicon (M1/M2/M3/M4) | `Minigo-1.0.7-arm64.dmg` |
+| macOS | Intel | `Minigo-1.0.7.dmg` |
 | Windows | x64 | Coming soon |
 
 ## Installation
