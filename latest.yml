@@ -1,0 +1,8 @@
+version: 1.0.8
+files:
+  - url: Minigo-Setup-1.0.8.exe
+    sha512: NY7ms5GNDqgnddVnng2MAMhy5hYPOfWzLeukAR1GEw/QW846vT2lfFyREZjr1/RroiZOPMABq7ZXZMT5LpIe1A==
+    size: 104553251
+path: Minigo-Setup-1.0.8.exe
+sha512: NY7ms5GNDqgnddVnng2MAMhy5hYPOfWzLeukAR1GEw/QW846vT2lfFyREZjr1/RroiZOPMABq7ZXZMT5LpIe1A==
+releaseDate: '2026-03-28T10:10:56.767Z'
