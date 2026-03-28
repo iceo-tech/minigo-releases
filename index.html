@@ -529,11 +529,11 @@
         </div>
         <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.0.4/Minigo-1.0.4-arm64.dmg" class="btn btn-primary btn-full" id="mac-download-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span data-i18n="download_mac">Tải cho Mac (Apple Silicon)</span>
+          <span id="mac-download-label" data-i18n="download_mac">Tải cho Mac (Apple Silicon)</span>
         </a>
         <div class="download-links">
-          <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.0.4/Minigo-1.0.4.dmg" class="chip">
-            <span data-i18n="download_intel">Intel Mac</span>
+          <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.0.4/Minigo-1.0.4.dmg" class="chip" id="mac-alt-link">
+            <span id="mac-alt-label" data-i18n="download_intel">Intel Mac</span>
           </a>
         </div>
       </div>
@@ -639,7 +639,9 @@
         win_version: 'Windows 10/11 (64-bit)',
         version_label: 'Phiên bản',
         download_mac: 'Tải cho Mac (Apple Silicon)',
+        download_mac_intel: 'Tải cho Mac (Intel)',
         download_intel: 'Intel Mac',
+        download_arm: 'Apple Silicon',
         download_win: 'Sắp ra mắt',
         coming_soon: 'Sắp có',
         features_title: 'Tại sao chọn Minigo?',
@@ -675,7 +677,9 @@
         win_version: 'Windows 10/11 (64-bit)',
         version_label: 'Version',
         download_mac: 'Download for Mac (Apple Silicon)',
+        download_mac_intel: 'Download for Mac (Intel)',
         download_intel: 'Intel Mac',
+        download_arm: 'Apple Silicon',
         download_win: 'Coming Soon',
         coming_soon: 'Coming soon',
         features_title: 'Why Minigo?',
@@ -720,6 +724,71 @@
 
     // Init
     applyLang(currentLang);
+
+    // ====== Auto-detect Mac architecture ======
+    const ARM_DMG = 'https://github.com/iceo-tech/minigo-releases/releases/download/v1.0.4/Minigo-1.0.4-arm64.dmg';
+    const INTEL_DMG = 'https://github.com/iceo-tech/minigo-releases/releases/download/v1.0.4/Minigo-1.0.4.dmg';
+
+    function setMacLinks(isAppleSilicon) {
+      const btn = document.getElementById('mac-download-btn');
+      const label = document.getElementById('mac-download-label');
+      const altLink = document.getElementById('mac-alt-link');
+      const altLabel = document.getElementById('mac-alt-label');
+      if (!btn || !altLink) return;
+
+      if (isAppleSilicon) {
+        // Default: primary = ARM, alt = Intel
+        btn.href = ARM_DMG;
+        label.setAttribute('data-i18n', 'download_mac');
+        altLink.href = INTEL_DMG;
+        altLabel.setAttribute('data-i18n', 'download_intel');
+      } else {
+        // Swap: primary = Intel, alt = ARM
+        btn.href = INTEL_DMG;
+        label.setAttribute('data-i18n', 'download_mac_intel');
+        altLink.href = ARM_DMG;
+        altLabel.setAttribute('data-i18n', 'download_arm');
+      }
+      // Re-apply current language to update text
+      applyLang(currentLang);
+    }
+
+    function detectMacArch() {
+      const isMac = /Mac/.test(navigator.platform || '') || /Mac/.test(navigator.userAgent || '');
+      if (!isMac) return; // Not a Mac, keep default (ARM as primary)
+
+      // Method 1: userAgentData (Chromium 90+)
+      if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+        navigator.userAgentData.getHighEntropyValues(['architecture']).then(function(ua) {
+          setMacLinks(ua.architecture === 'arm');
+        }).catch(function() {
+          detectViaWebGL();
+        });
+        return;
+      }
+      // Method 2: WebGL renderer
+      detectViaWebGL();
+    }
+
+    function detectViaWebGL() {
+      try {
+        var canvas = document.createElement('canvas');
+        var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (gl) {
+          var dbg = gl.getExtension('WEBGL_debug_renderer_info');
+          if (dbg) {
+            var renderer = gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) || '';
+            // Apple Silicon GPUs contain "Apple M" in the renderer string
+            setMacLinks(/Apple M/i.test(renderer) || /Apple GPU/i.test(renderer));
+            return;
+          }
+        }
+      } catch (e) {}
+      // Fallback: default to Apple Silicon (most common since 2020+)
+      setMacLinks(true);
+    }
+
+    detectMacArch();
 
     // Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
