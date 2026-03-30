@@ -1,8 +1,8 @@
-version: 1.1.1
+version: 1.1.2
 files:
-  - url: Minigo-Setup-1.1.1.exe
-    sha512: 6KLdZe+lNPU2/EcaCn65bL6+ao5QrwtKcGmg3ufviefZ94pxCOBqP6SyhJPNthMxepFzPrsCdycBAIglTNzCiw==
-    size: 105323020
-path: Minigo-Setup-1.1.1.exe
-sha512: 6KLdZe+lNPU2/EcaCn65bL6+ao5QrwtKcGmg3ufviefZ94pxCOBqP6SyhJPNthMxepFzPrsCdycBAIglTNzCiw==
-releaseDate: '2026-03-30T04:23:46.335Z'
+  - url: Minigo-Setup-1.1.2.exe
+    sha512: SSh/SBHIQTldsFcEvpMq5PslDnvc3K0Mop3u1KN0QXar9Ar8UXkcuWKaxbfpDQ0q5qCyCRqvhPvSpHzF2sX5xA==
+    size: 105340537
+path: Minigo-Setup-1.1.2.exe
+sha512: SSh/SBHIQTldsFcEvpMq5PslDnvc3K0Mop3u1KN0QXar9Ar8UXkcuWKaxbfpDQ0q5qCyCRqvhPvSpHzF2sX5xA==
+releaseDate: '2026-03-30T11:39:02.823Z'

@@ -126,7 +126,7 @@
     /* ====== HERO ====== */
     .hero {
       text-align: center;
-      padding: 80px 0 60px;
+      padding: 48px 0 40px;
     }
     .hero-badge {
       display: inline-flex;
@@ -169,8 +169,46 @@
       font-size: clamp(16px, 2.5vw, 20px);
       color: #8B86A8;
       max-width: 580px;
-      margin: 0 auto 40px;
+      margin: 0 auto 32px;
       line-height: 1.7;
+    }
+
+    /* ====== HERO DOWNLOAD (OS-detected) ====== */
+    .hero-download {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .hero-download-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-download .btn {
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: var(--radius-lg);
+    }
+    .hero-download .btn-primary {
+      box-shadow: 0 6px 32px rgba(109, 40, 217, 0.4);
+    }
+    .hero-download .btn-primary:hover {
+      box-shadow: 0 10px 40px rgba(109, 40, 217, 0.5);
+    }
+    .hero-download-alt {
+      font-size: 13px;
+      color: #6B6589;
+    }
+    .hero-download-alt a {
+      color: #A78BFA;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .hero-download-alt a:hover {
+      color: var(--light-purple);
     }
 
     /* ====== DOWNLOAD CARDS ====== */
@@ -442,10 +480,12 @@
 
     /* ====== RESPONSIVE ====== */
     @media (max-width: 768px) {
-      .hero { padding: 48px 0 40px; }
+      .hero { padding: 36px 0 28px; }
       .hero h1 { letter-spacing: -1px; }
-      .hero-sub { font-size: 16px; padding: 0 8px; }
+      .hero-sub { font-size: 16px; padding: 0 8px; margin-bottom: 24px; }
       .nav-links { display: none; }
+      .hero-download-btns { flex-direction: column; width: 100%; max-width: 320px; }
+      .hero-download-btns .btn { width: 100%; }
       .download-grid { grid-template-columns: 1fr; max-width: 420px; }
       .download-card { padding: 28px 24px; }
       .features-grid { grid-template-columns: 1fr; }
@@ -453,10 +493,11 @@
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
-      .hero { padding: 36px 0 32px; }
+      .hero { padding: 28px 0 20px; }
       .hero-badge { font-size: 12px; padding: 5px 12px; }
       .download-card { padding: 24px 20px; }
       .btn { padding: 12px 20px; font-size: 14px; }
+      .hero-download .btn { padding: 14px 20px; font-size: 15px; }
       .features { padding: 40px 0 60px; }
     }
 
@@ -499,7 +540,7 @@
   <section class="hero container">
     <div class="hero-badge animate">
       <span class="hero-badge-dot"></span>
-      <span data-i18n="hero_badge">Phiên bản 1.1.1 — Mới phát hành</span>
+      <span data-i18n="hero_badge">Phiên bản 1.1.2 — Mới phát hành</span>
     </div>
     <h1 class="animate animate-d1">
       <span data-i18n="hero_title_1">Trợ lý AI của bạn,</span><br>
@@ -508,6 +549,11 @@
     <p class="hero-sub animate animate-d2" data-i18n="hero_sub">
       Minigo giúp bạn cài đặt và sử dụng OpenClaw — AI agent mạnh mẽ — chỉ với vài cú click. Không cần dòng lệnh, không cần kỹ thuật.
     </p>
+
+    <!-- OS-detected hero download -->
+    <div class="hero-download animate animate-d3" id="hero-download">
+      <!-- Populated by JS based on detected OS -->
+    </div>
   </section>
 
   <!-- Downloads -->
@@ -527,14 +573,14 @@
         <div class="os-version" data-i18n="mac_version">macOS 10.15 Catalina trở lên</div>
         <div class="file-info">
           <span><span class="label">DMG</span></span>
-          <span><span class="label" data-i18n="version_label">Phiên bản</span> 1.1.1</span>
+          <span><span class="label" data-i18n="version_label">Phiên bản</span> 1.1.2</span>
         </div>
-        <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.1/Minigo-1.1.1-arm64.dmg" class="btn btn-primary btn-full" id="mac-download-btn">
+        <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.2/Minigo-1.1.2-arm64.dmg" class="btn btn-primary btn-full" id="mac-download-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span id="mac-download-label" data-i18n="download_mac">Tải cho Mac (Apple Silicon)</span>
         </a>
         <div class="download-links">
-          <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.1/Minigo-1.1.1.dmg" class="chip" id="mac-alt-link">
+          <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.2/Minigo-1.1.2.dmg" class="chip" id="mac-alt-link">
             <span id="mac-alt-label" data-i18n="download_intel">Intel Mac</span>
           </a>
         </div>
@@ -554,9 +600,9 @@
         <div class="os-version" data-i18n="win_version">Windows 10/11 (64-bit)</div>
         <div class="file-info">
           <span><span class="label">EXE</span></span>
-          <span><span class="label" data-i18n="version_label">Phiên bản</span> 1.1.1</span>
+          <span><span class="label" data-i18n="version_label">Phiên bản</span> 1.1.2</span>
         </div>
-        <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.1/Minigo-Setup-1.1.1.exe" class="btn btn-primary btn-full" id="win-download-btn">
+        <a href="https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.2/Minigo-Setup-1.1.2.exe" class="btn btn-primary btn-full" id="win-download-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span data-i18n="download_win">Tải cho Windows (64-bit)</span>
         </a>
@@ -630,7 +676,7 @@
         nav_download: 'Tải xuống',
         nav_features: 'Tính năng',
         nav_requirements: 'Yêu cầu',
-        hero_badge: 'Phiên bản 1.1.1 — Mới phát hành',
+        hero_badge: 'Phiên bản 1.1.2 — Mới phát hành',
         hero_title_1: 'Trợ lý AI của bạn,',
         hero_title_2: 'ngay trên Desktop.',
         hero_sub: 'Minigo giúp bạn cài đặt và sử dụng OpenClaw — AI agent mạnh mẽ — chỉ với vài cú click. Không cần dòng lệnh, không cần kỹ thuật.',
@@ -662,12 +708,17 @@
         req_win_3: 'RAM tối thiểu 4GB',
         req_win_4: '500MB dung lượng trống',
         footer_powered: 'Powered by OpenClaw',
+        hero_dl_mac_silicon: 'Tải cho Apple Silicon',
+        hero_dl_mac_intel: 'Tải cho Intel Mac',
+        hero_dl_win: 'Tải cho Windows',
+        hero_dl_or: 'hoặc tải cho',
+        hero_dl_other_os: 'Xem tất cả phiên bản',
       },
       en: {
         nav_download: 'Download',
         nav_features: 'Features',
         nav_requirements: 'Requirements',
-        hero_badge: 'Version 1.1.1 — Just Released',
+        hero_badge: 'Version 1.1.2 — Just Released',
         hero_title_1: 'Your AI assistant,',
         hero_title_2: 'right on Desktop.',
         hero_sub: 'Minigo helps you install and use OpenClaw — a powerful AI agent — with just a few clicks. No command line, no technical skills needed.',
@@ -699,6 +750,11 @@
         req_win_3: 'Minimum 4GB RAM',
         req_win_4: '500MB free disk space',
         footer_powered: 'Powered by OpenClaw',
+        hero_dl_mac_silicon: 'Download for Apple Silicon',
+        hero_dl_mac_intel: 'Download for Intel Mac',
+        hero_dl_win: 'Download for Windows',
+        hero_dl_or: 'or download for',
+        hero_dl_other_os: 'See all versions',
       },
     };
 
@@ -722,49 +778,81 @@
     // Init
     applyLang(currentLang);
 
-    // ====== Auto-detect Mac architecture ======
-    const ARM_DMG = 'https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.1/Minigo-1.1.1-arm64.dmg';
-    const INTEL_DMG = 'https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.1/Minigo-1.1.1.dmg';
+    // ====== Auto-detect OS & architecture ======
+    const ARM_DMG = 'https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.2/Minigo-1.1.2-arm64.dmg';
+    const INTEL_DMG = 'https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.2/Minigo-1.1.2.dmg';
+    const WIN_EXE = 'https://github.com/iceo-tech/minigo-releases/releases/download/v1.1.2/Minigo-Setup-1.1.2.exe';
+
+    const dlIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
+
+    function detectOS() {
+      var ua = navigator.userAgent || '';
+      var platform = navigator.platform || '';
+      if (/Mac/.test(platform) || /Mac/.test(ua)) return 'mac';
+      if (/Win/.test(platform) || /Win/.test(ua)) return 'win';
+      return 'other';
+    }
+
+    // Render hero download for Mac (with architecture detection result)
+    function renderHeroMac(isAppleSilicon) {
+      var hero = document.getElementById('hero-download');
+      if (!hero) return;
+      var primary = isAppleSilicon ? ARM_DMG : INTEL_DMG;
+      var secondary = isAppleSilicon ? INTEL_DMG : ARM_DMG;
+      var primaryKey = isAppleSilicon ? 'hero_dl_mac_silicon' : 'hero_dl_mac_intel';
+      var secondaryKey = isAppleSilicon ? 'hero_dl_mac_intel' : 'hero_dl_mac_silicon';
+
+      hero.innerHTML =
+        '<div class="hero-download-btns">' +
+          '<a href="' + primary + '" class="btn btn-primary">' + dlIcon + ' <span data-i18n="' + primaryKey + '">' + (i18n[currentLang]?.[primaryKey] || '') + '</span></a>' +
+          '<a href="' + secondary + '" class="btn btn-secondary">' + dlIcon + ' <span data-i18n="' + secondaryKey + '">' + (i18n[currentLang]?.[secondaryKey] || '') + '</span></a>' +
+        '</div>' +
+        '<div class="hero-download-alt"><a href="#download" data-i18n="hero_dl_other_os">' + (i18n[currentLang]?.hero_dl_other_os || '') + '</a></div>';
+
+      // Also update the download cards section
+      setMacLinks(isAppleSilicon);
+    }
+
+    // Render hero download for Windows
+    function renderHeroWin() {
+      var hero = document.getElementById('hero-download');
+      if (!hero) return;
+      hero.innerHTML =
+        '<div class="hero-download-btns">' +
+          '<a href="' + WIN_EXE + '" class="btn btn-primary">' + dlIcon + ' <span data-i18n="hero_dl_win">' + (i18n[currentLang]?.hero_dl_win || '') + '</span></a>' +
+        '</div>' +
+        '<div class="hero-download-alt"><a href="#download" data-i18n="hero_dl_other_os">' + (i18n[currentLang]?.hero_dl_other_os || '') + '</a></div>';
+    }
+
+    // Render hero download fallback (show all)
+    function renderHeroAll() {
+      var hero = document.getElementById('hero-download');
+      if (!hero) return;
+      hero.innerHTML =
+        '<div class="hero-download-btns">' +
+          '<a href="#download" class="btn btn-primary">' + dlIcon + ' <span data-i18n="hero_dl_other_os">' + (i18n[currentLang]?.hero_dl_other_os || '') + '</span></a>' +
+        '</div>';
+    }
 
     function setMacLinks(isAppleSilicon) {
-      const btn = document.getElementById('mac-download-btn');
-      const label = document.getElementById('mac-download-label');
-      const altLink = document.getElementById('mac-alt-link');
-      const altLabel = document.getElementById('mac-alt-label');
+      var btn = document.getElementById('mac-download-btn');
+      var label = document.getElementById('mac-download-label');
+      var altLink = document.getElementById('mac-alt-link');
+      var altLabel = document.getElementById('mac-alt-label');
       if (!btn || !altLink) return;
 
       if (isAppleSilicon) {
-        // Default: primary = ARM, alt = Intel
         btn.href = ARM_DMG;
         label.setAttribute('data-i18n', 'download_mac');
         altLink.href = INTEL_DMG;
         altLabel.setAttribute('data-i18n', 'download_intel');
       } else {
-        // Swap: primary = Intel, alt = ARM
         btn.href = INTEL_DMG;
         label.setAttribute('data-i18n', 'download_mac_intel');
         altLink.href = ARM_DMG;
         altLabel.setAttribute('data-i18n', 'download_arm');
       }
-      // Re-apply current language to update text
       applyLang(currentLang);
-    }
-
-    function detectMacArch() {
-      const isMac = /Mac/.test(navigator.platform || '') || /Mac/.test(navigator.userAgent || '');
-      if (!isMac) return; // Not a Mac, keep default (ARM as primary)
-
-      // Method 1: userAgentData (Chromium 90+)
-      if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
-        navigator.userAgentData.getHighEntropyValues(['architecture']).then(function(ua) {
-          setMacLinks(ua.architecture === 'arm');
-        }).catch(function() {
-          detectViaWebGL();
-        });
-        return;
-      }
-      // Method 2: WebGL renderer
-      detectViaWebGL();
     }
 
     function detectViaWebGL() {
@@ -775,17 +863,39 @@
           var dbg = gl.getExtension('WEBGL_debug_renderer_info');
           if (dbg) {
             var renderer = gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) || '';
-            // Apple Silicon GPUs contain "Apple M" in the renderer string
-            setMacLinks(/Apple M/i.test(renderer) || /Apple GPU/i.test(renderer));
+            renderHeroMac(/Apple M/i.test(renderer) || /Apple GPU/i.test(renderer));
             return;
           }
         }
       } catch (e) {}
-      // Fallback: default to Apple Silicon (most common since 2020+)
-      setMacLinks(true);
+      renderHeroMac(true);
     }
 
-    detectMacArch();
+    // Main detection flow
+    (function initHeroDownload() {
+      var os = detectOS();
+
+      if (os === 'win') {
+        renderHeroWin();
+        return;
+      }
+
+      if (os === 'mac') {
+        // Detect architecture
+        if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+          navigator.userAgentData.getHighEntropyValues(['architecture']).then(function(ua) {
+            renderHeroMac(ua.architecture === 'arm');
+          }).catch(function() {
+            detectViaWebGL();
+          });
+          return;
+        }
+        detectViaWebGL();
+        return;
+      }
+
+      renderHeroAll();
+    })();
 
     // Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
