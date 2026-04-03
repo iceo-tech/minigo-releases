@@ -1,11 +1,17 @@
-version: 1.1.2
+version: 1.1.8
 files:
-  - url: Minigo-1.1.2.dmg
-    sha512: awXuF8kAR/lU+PUKA+ys5V++YJDjGSpSzBE8kI9/noA9zSDh801lpSfuOToZldkJNxjxt9yvedAVgwM0LZ+lcg==
-    size: 127889519
-  - url: Minigo-1.1.2-arm64.dmg
-    sha512: k7HklGRHbkcGnrxRBVrT/WDvzAPCpXhIiyWksq/huowURn8VUJdDY84ZpPRLyjGb80/6W03/UwqgOS1fyx/R3w==
-    size: 119756631
-path: Minigo-1.1.2.dmg
-sha512: awXuF8kAR/lU+PUKA+ys5V++YJDjGSpSzBE8kI9/noA9zSDh801lpSfuOToZldkJNxjxt9yvedAVgwM0LZ+lcg==
-releaseDate: '2026-03-30T11:38:19.684Z'
+  - url: MiniGo-1.1.8-mac-x64.zip
+    sha512: iA4f7E2h6AiQFS9wQC1gRmJBYDjXNNE7pFF1WoWVIU5KCs6zSNk3MUZLgFumUhqbbZyA0C5/9fLcLjiReX1crw==
+    size: 359506783
+  - url: MiniGo-1.1.8-mac-arm64.zip
+    sha512: WqHq1rXuYGKk/RFmZit8F6a/dhbYu5wPrYs5MW/h8Zn6sAj1vVqMexWORz1cSCzKWxt38osHzHGgaM3PZRkXTA==
+    size: 350013452
+  - url: MiniGo-1.1.8-mac-x64.dmg
+    sha512: 9xYM36wIRsX9jLp2rb5IFQWAkkQlwrX315mnl/TqZRHPWfKRtNn3IAWUHVwOLb5Ah2FI7z/lGHphcrIZttAIdQ==
+    size: 366392957
+  - url: MiniGo-1.1.8-mac-arm64.dmg
+    sha512: FenVVhAJOipuOoAIB/f4cSkPZUeSiQD4Xg/LSaTc8Jwwv/osnu/k2FFN27uudKyaPBE/8Wbn2/PwP+2oUkE57w==
+    size: 356774156
+path: MiniGo-1.1.8-mac-x64.zip
+sha512: iA4f7E2h6AiQFS9wQC1gRmJBYDjXNNE7pFF1WoWVIU5KCs6zSNk3MUZLgFumUhqbbZyA0C5/9fLcLjiReX1crw==
+releaseDate: '2026-04-03T09:37:06.994Z'
