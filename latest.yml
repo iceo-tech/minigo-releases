@@ -1,8 +1,8 @@
-version: 1.1.11
+version: 1.1.12
 files:
-  - url: MiniGo-1.1.11-win-x64.exe
-    sha512: b/bKXkQJlH7Dy5wxvYfd2DAx/x/dwOR9PyGXbRfb8YiGEznWWEcT1OnPuyrr3j3QzmWSEGtwQCb55WK5mEQbpA==
-    size: 268249832
-path: MiniGo-1.1.11-win-x64.exe
-sha512: b/bKXkQJlH7Dy5wxvYfd2DAx/x/dwOR9PyGXbRfb8YiGEznWWEcT1OnPuyrr3j3QzmWSEGtwQCb55WK5mEQbpA==
-releaseDate: '2026-04-04T14:54:56.119Z'
+  - url: MiniGo-1.1.12-win-x64.exe
+    sha512: ZW2v0/fNaUzzboQk8tzoLADChNI2Hq4GIg0RCpQjbU310bcCCCoxlPywDTwby4p+lymb6af62uu/9lleI5Zg2g==
+    size: 268283248
+path: MiniGo-1.1.12-win-x64.exe
+sha512: ZW2v0/fNaUzzboQk8tzoLADChNI2Hq4GIg0RCpQjbU310bcCCCoxlPywDTwby4p+lymb6af62uu/9lleI5Zg2g==
+releaseDate: '2026-04-05T00:29:29.554Z'
