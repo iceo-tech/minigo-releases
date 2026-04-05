@@ -1,17 +1,17 @@
-version: 1.1.12
+version: 1.1.14
 files:
-  - url: MiniGo-1.1.12-mac-x64.zip
-    sha512: 6AJZ6ykX15anAPameKu5OFb7X/TV5M7fLEw7qfwwWlrWYM1RuzQ93JXNACmoXqjtUbnfEwVbksoKBu/+6WqrpQ==
-    size: 346722733
-  - url: MiniGo-1.1.12-mac-arm64.zip
-    sha512: xlEhUgNlM3+c+tt4titPUCPAda6I/voQj8Qp3DDnSoU6uWLN9jIwXkwxfGhcCZeOJP2inQonDxC94Q3h/JC1xQ==
-    size: 337950981
-  - url: MiniGo-1.1.12-mac-x64.dmg
-    sha512: HlgZnoKZJpw1q+f5+2MWDW0CEAOHVlwV4LgQDWILee6ztUxtsQwlwrTxnl3QaL6hLXH4iiqsmxVWfRWcWBW1GA==
-    size: 308683443
-  - url: MiniGo-1.1.12-mac-arm64.dmg
-    sha512: SQl5xDaKhKaG2u1KUf4EWGvfvuov2NzJHdIxinonnGl0KDDNvmg2BBsvcbP7L5RCWEVkwJvOJUatYnwGHJzl6g==
-    size: 301589689
-path: MiniGo-1.1.12-mac-x64.zip
-sha512: 6AJZ6ykX15anAPameKu5OFb7X/TV5M7fLEw7qfwwWlrWYM1RuzQ93JXNACmoXqjtUbnfEwVbksoKBu/+6WqrpQ==
-releaseDate: '2026-04-05T00:23:40.511Z'
+  - url: MiniGo-1.1.14-mac-x64.zip
+    sha512: 95R7IDVH4LpweOLhKrCF5zxDYXK44Bx6mn5u0uAjLxgUype6wC57anjHV901rYjSM5TbcVZz3AR+GLOS294HCA==
+    size: 347766879
+  - url: MiniGo-1.1.14-mac-arm64.zip
+    sha512: TzIztitVKoJkXe5YNZo9Br5dxmSe37GYS62mpiq6tXysG412XBOnJQwV/Dmeobf5IcAOm/JzrVt/V5nddA0X5A==
+    size: 338995164
+  - url: MiniGo-1.1.14-mac-x64.dmg
+    sha512: Y4CdL06kegzWTUuUUN/IwCiDaVTDxgHPrBt2MXwvP/ahAm3uVO620ma0CI8Luarn82cCnFxVQMPKK6k+X4cUpg==
+    size: 309863534
+  - url: MiniGo-1.1.14-mac-arm64.dmg
+    sha512: nXzQl9hmhh49mtaOtwS2ltTlWwxAiVeN1bydNqQqNg5czOz0Cj+rfZvMIoGEcGsTLSujyAjR/D13vJebKEI5wQ==
+    size: 302618965
+path: MiniGo-1.1.14-mac-x64.zip
+sha512: 95R7IDVH4LpweOLhKrCF5zxDYXK44Bx6mn5u0uAjLxgUype6wC57anjHV901rYjSM5TbcVZz3AR+GLOS294HCA==
+releaseDate: '2026-04-05T11:52:44.687Z'
