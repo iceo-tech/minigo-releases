@@ -1,17 +1,17 @@
-version: 1.1.17
+version: 1.1.18
 files:
-  - url: MiniGo-1.1.17-mac-x64.zip
-    sha512: Do9jiaiG17A/dPLpnNyvkXdMh4l8MpLpZQU3MruBp2mUY3ZxDxy+gAAECrbWLuhUrAcyIpGWTt4JFuqvi7OOSw==
-    size: 373228536
-  - url: MiniGo-1.1.17-mac-arm64.zip
-    sha512: sOUDvVd+0A/NpQ7CCNk5KtiUseOcfWjpCnu/OVwxU633US/3RJiSU3xiDUdSSFpTSWAX+zXDEDEJq441gaHhuQ==
-    size: 364456794
-  - url: MiniGo-1.1.17-mac-x64.dmg
-    sha512: S95yoXXCuM4Zt4devjMqaQMGRnfTHJ0YF4NtMEASaX3qaiTrHKdzOsO5HBl6uScHWlukbelINz9FFQy6C4acBw==
-    size: 325467482
-  - url: MiniGo-1.1.17-mac-arm64.dmg
-    sha512: GTZqy9CO9YaxYo84BqNOnigUaLmcnxLIQ0RNW9WMS9oOHkvg2LKyGPwjNwCfs0jCF+FW0tLwgWeLv7ekKvrSzg==
-    size: 318357260
-path: MiniGo-1.1.17-mac-x64.zip
-sha512: Do9jiaiG17A/dPLpnNyvkXdMh4l8MpLpZQU3MruBp2mUY3ZxDxy+gAAECrbWLuhUrAcyIpGWTt4JFuqvi7OOSw==
-releaseDate: '2026-04-10T12:51:41.773Z'
+  - url: MiniGo-1.1.18-mac-x64.zip
+    sha512: 3RnF3NMqobyGrCfcSAzpgDMZ4NP5J7E/SAaga04B3ylYk7LCdCxuJnzwjUNqkFPA7T5s5jniUfLnjbaJtJNPMw==
+    size: 395484004
+  - url: MiniGo-1.1.18-mac-arm64.zip
+    sha512: FWb/EwGVTEu2ayvsxiiU1cgsEMZAA/I77Retg0x5vrNWiW+FOaX4d7X1s51kJDYExsVCt7ec2grbMfLjgilhmg==
+    size: 386712244
+  - url: MiniGo-1.1.18-mac-x64.dmg
+    sha512: XG1LB79udiWeS9A2wFAhmntsNmKwsVonk5cMUM0FJBvrWlKjscVVpP+g1bXJgPZdlbR3/aKwnObe44qZl0IuAw==
+    size: 343839094
+  - url: MiniGo-1.1.18-mac-arm64.dmg
+    sha512: vKL0WDtgq1IeMlKRJZ+T49FBeovp1Xm++nNDJPaPb2C1fsI7LblqkyEOx/U0CYDQ0QAt89OhENHV8u2QN79Srg==
+    size: 336616148
+path: MiniGo-1.1.18-mac-x64.zip
+sha512: 3RnF3NMqobyGrCfcSAzpgDMZ4NP5J7E/SAaga04B3ylYk7LCdCxuJnzwjUNqkFPA7T5s5jniUfLnjbaJtJNPMw==
+releaseDate: '2026-04-11T09:33:28.259Z'
